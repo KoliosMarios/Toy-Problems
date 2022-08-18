@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        //we need an array to return the result
+        let result = [];
+        //first we check if the string has an odd number of characters
+        //if it does we put an underscore to make it even
+        if (str.length % 2 !== 0) {
+          str += "_";
+        }
+        //we loop through the string and put the pairs in the array
+        //for example str[0] + str[1] will bethe first element of the array, then str[2] + str[3] the second and so on
+        for (let i = 0; i < str.length; i += 2) {
+          result.push(str[i] + str[i + 1]);
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>
