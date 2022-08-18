@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Complete the solution so that the function will break up camel casing, using a space between words. -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solution(string) {
+        //first we are gonna return the result to a string
+        let result = "";
+        //then we loop through every letter in the string
+        //if the letter is in upper case we put a space before it
+        //if it's not in upper case we let it as it is
+        for (letter of string) {
+          if (letter === letter.toUpperCase()) {
+            result += " " + letter;
+          } else {
+            result += letter;
+          }
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>
