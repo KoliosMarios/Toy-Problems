@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+    Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
+    
+    Note: If the number is a multiple of both 3 and 5, only count it once. -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function solution(number) {
+        //first we initiate the variable that will store our result
+        let sum = 0;
+        //then we check if the number is negative
+        if (number < 0) {
+            return 0;
+        }
+        //we loop from number 1 up to given number 
+        for (let i = 1; i < number; i++) {
+            //we check if it is a multiple of 3 and if it is we add it to sum
+            if (i % 3 === 0) {
+                sum += i;
+            }
+            //if it is not a multiple of 3 we check if it is a multiple of 5 and if it is we add it to the sum
+            //we use else so if it is already a multiple of 3 we don't check again
+            else if (i % 5 === 0) {
+                sum += i;
+            }
+        }
+        return sum;
+      }
+    </script>
+  </body>
+</html>
