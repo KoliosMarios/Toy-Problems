@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer. -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function digital_root(n) {
+        //first we declare the variable for thr sum
+        //if the number has only one digit then the sum will be the number itself
+        let sum = n;
+        //then we declare an array to put the digits of the number
+        let arr = [];
+        //declare the callback function to use in reduce
+        function myFunc(total, num) {
+          //we use parseInt to pass the arguments as integers
+          return parseInt(total) + parseInt(num);
+        }
+        //this has to repeat as long the number has more than one digits
+        while (sum > 9) {
+            //we split the digits and put them in an array
+            arr = sum.toString().split("");
+            //then we call the reduce function and store the result in sum
+            sum = arr.reduce(myFunc);
+        }
+        return sum;
+      }
+    </script>
+  </body>
+</html>
