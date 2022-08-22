@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function countBits(n) {
+        //we use the toString(2) function to make the number into a binary
+        const b = n.toString(2);
+        //we declare a counter so we can count how many "1" there are in the binary
+        let counter = 0;
+        //we iterate through the binary and when a digit is "1" we add 1 to the counter
+        for (let i = 0; i < b.length; i++) {
+          if (b[i] === "1") {
+            counter += 1;
+          }
+        }
+        console.log(b);
+        return counter;
+      }
+    </script>
+  </body>
+</html>
