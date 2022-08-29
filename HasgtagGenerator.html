@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Create a function that takes a phrase and generates a hashtag from it 
+        If the length of the string is zero or greater than 139 characters return false -->
+  </head>
+  <body>
+    <script>
+      //first we create a function to capitalize the first letter of a single word
+      function capitalizeFirstLetter(str) {
+        const cap = str.charAt(0).toUpperCase() + str.slice(1);
+        return cap;
+      }
+      function generateHashtag(str) {
+        //split the string and put the words in an array
+        const words = str.split(" ");
+        //capitalize the first letter of each word
+        const capWords = words.map(capitalizeFirstLetter);
+        //join all the elements in the array in one string
+        const hash = capWords.join("");
+        //check for conditions
+        if (hash.length === 0 || hash.length > 139) {
+          return false;
+        }
+        //we return it with a "#"
+        return "#" + hash;
+      }
+    </script>
+  </body>
+</html>
