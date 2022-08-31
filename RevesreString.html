@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Write a function that takes a string and reverses it -->
+</head>
+<body>
+    <script>
+        function reverseString(str) {
+            //first we split the letters in the srting and put them in an array
+            let splitString = str.split("");
+            
+            //then we reverse the array
+            let reverseArray = splitString.reverse();
+
+            //then we join the characters in the array in a string
+            let joinArray = reverseArray.join("");
+
+            //finally we return the reversed string
+            return joinArray;
+        }
+    </script>
+</body>
+</html>
